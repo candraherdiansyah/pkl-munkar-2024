@@ -48,7 +48,7 @@
                         <td>{{$data->name}}</td>
                         <td>{{$data->email}}</td>
                         <td>{{$data->isAdmin == 1 ? 'Admin' : 'User'}}</td>
-                        <td></td>
+                        <td><button class="btn btn-sm btn-danger" disabled>Can't Delete</button></td>
                     </tr>
                     @else
                     <tr>

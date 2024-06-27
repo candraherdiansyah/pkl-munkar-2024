@@ -63,8 +63,35 @@
                                     <i class="fal fa-shopping-cart"></i>
                                     <span class="tp-product-count">2</span>
                                 </button>
-                                <a href="sign-in.html"><i class="fal fa-user"></i></a>
+                                @guest
                                 <a href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                <a href="{{url('login')}}" class="header-meta__value mr-15"><i
+                                        class="fal fa-user"></i></a>
+                                @else
+                                <div class="header-meta__lang">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                {{Auth::user()->name}}
+                                                <span><i class="fal fa-angle-down"></i></span>
+                                            </a>
+                                            <ul class="header-meta__lang-submenu">
+                                                <li>
+                                                    <a href="#">Profile</a>
+                                                </li>
+                                                <hr>
+                                                <li>
+                                                    <a href="{{route('logout')}}"
+                                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                                                    <form action="{{route('logout')}}" method="post" id="logout-form">
+                                                        @csrf
+                                                    </form>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                @endguest
                             </div>
                         </div>
                     </div>
