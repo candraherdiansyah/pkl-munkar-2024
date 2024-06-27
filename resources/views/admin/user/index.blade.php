@@ -54,7 +54,8 @@
                                 <a href="{{route('user.edit',$data->id)}}" class="btn btn-sm btn-warning">
                                     Edit
                                 </a> |
-                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                <button type="submit" class="btn btn-sm btn-danger"
+                                    data-confirm-delete="true">Delete</button>
                             </form>
                         </td>
                     </tr>
@@ -73,6 +74,6 @@
     $(document).ready(function() {
 		$('#example').DataTable();
 	});
-
 </script>
+
 @endpush
