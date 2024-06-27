@@ -54,8 +54,8 @@
                                 <a href="{{route('user.edit',$data->id)}}" class="btn btn-sm btn-warning">
                                     Edit
                                 </a> |
-                                <button type="submit" class="btn btn-sm btn-danger"
-                                    data-confirm-delete="true">Delete</button>
+                                <a href="{{ route('user.destroy', $data->id) }}" class="btn btn-danger"
+                                    data-confirm-delete="true">Delete</a>
                             </form>
                         </td>
                     </tr>
