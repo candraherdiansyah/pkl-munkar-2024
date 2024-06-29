@@ -336,7 +336,7 @@
                             <i class="fal fa-shopping-cart"></i>
                             <span class="tp-product-count">2</span>
                         </button>
-                        <a href="sign-in.html"><i class="fal fa-user"></i></a>
+                        <a href="{{url('login')}}"><i class="fal fa-user"></i></a>
                         <a href="wishlist.html"><i class="fal fa-heart"></i></a>
                     </div>
                     <div class="header-meta__search-5 ml-25">

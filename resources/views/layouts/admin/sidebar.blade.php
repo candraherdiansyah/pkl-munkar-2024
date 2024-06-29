@@ -27,15 +27,7 @@
                     <div class="menu-title">Users Management</div>
                 </a>
             </li>
-            <li class="menu-label">UI Elements</li>
-            <li>
-                <a href="cards.html">
-                    <div class="parent-icon"><i class="material-icons-outlined">inventory_2</i>
-                    </div>
-                    <div class="menu-title">Cards</div>
-                </a>
-            </li>
-
+            <li class="menu-label">Product Menu</li>
             <li>
                 <a href="javascript:;" class="has-arrow">
                     <div class="parent-icon"><i class="material-icons-outlined">shopping_bag</i>
@@ -43,10 +35,11 @@
                     <div class="menu-title">eCommerce</div>
                 </a>
                 <ul>
-                    <li><a href="ecommerce-add-product.html"><i class="material-icons-outlined">arrow_right</i>Add
-                            Product</a>
+                    <li><a href="{{route('category.index')}}"><i
+                                class="material-icons-outlined">arrow_right</i>Category</a>
                     </li>
-                    <li><a href="ecommerce-products.html"><i class="material-icons-outlined">arrow_right</i>Products</a>
+                    <li><a href="{{route('product.index')}}"><i
+                                class="material-icons-outlined">arrow_right</i>Products</a>
                     </li>
                     <li><a href="ecommerce-customers.html"><i
                                 class="material-icons-outlined">arrow_right</i>Customers</a>

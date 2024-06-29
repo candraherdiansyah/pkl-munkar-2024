@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\ProductController;
 use App\Http\Middleware\IsAdmin;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +17,10 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', IsAdmin::class]], fu
     });
     // untuk Route Backend Lainnya
     Route::resource('user', App\Http\Controllers\UsersController::class);
+    Route::resource('category', CategoryController::class);
+    Route::resource('product', ProductController::class);
+    Route::post('product/media', [ProductController::class, 'storeMedia'])->name('product.storeMedia');
+
 });
 
 // Route Frontend
