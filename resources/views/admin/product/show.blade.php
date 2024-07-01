@@ -11,8 +11,7 @@
     <div class="row">
         @foreach($product->image as $image)
         <div class="col-md-3">
-            <img src="{{ Storage::url('tmp/uploads/products/' . $image->file_name) }}" class="img-fluid"
-                alt="{{ $product->name }}">
+            <img src="{{ asset('storage/products/' . $image->image_product) }}" class="w-100 rounded">
         </div>
         @endforeach
     </div>
